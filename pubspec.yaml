@@ -1,0 +1,17 @@
+name: wt_name_that_color
+description: "Library for managing the layout of an application.."
+publish_to: 'none'
+version: 0.1.7+8
+
+environment:
+  sdk: '>=3.2.5 <4.0.0'
+
+flutter:
+  uses-material-design: true
+
+dependencies:
+  collection: any
+
+dev_dependencies:
+  build_runner: any
+  test: ^1.25.5

@@ -7,7 +7,7 @@ Add the following to your .zprofile file (or equivalent), where the PROJECTS_DIR
 location where the wt_name_that_color can be found.
 
 ```zsh
-source [PROJECTS_DIRECTORY]/wt_name_that_color/name_that_colour_alias.sh
+source [PROJECTS_DIRECTORY]/wt_name_that_color/name_that_color_alias.sh
 ```
 
 ## Usage
