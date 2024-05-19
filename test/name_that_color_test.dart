@@ -6,6 +6,11 @@ void main() {
     final nameThatColor = NameThatColor();
 
     test('SmokeTest', () {
+      expect(nameThatColor.findClosestColor('#FFFFFF'), equals('White'));
+      expect(nameThatColor.findClosestColor('#456664'), equals('Deep Space Sparkle'));
+    });
+
+    test('Test Known', () {
       expect(nameThatColor.findClosestColor('#456664'), equals('Deep Space Sparkle'));
       expect(nameThatColor.findClosestColor('#FFFFFF'), equals('White'));
       expect(nameThatColor.findClosestColor('#000000'), equals('Black'));
