@@ -6,9 +6,16 @@ version: 0.1.7+8
 environment:
   sdk: '>=3.2.5 <4.0.0'
 
-flutter:
-  uses-material-design: true
-
+scripts:
+    get: flutter pub get
+    clean: flutter pub get
+    refresh: flutter clean; flutter pub get
+    test: flutter test
+    analyse: flutter analyze
+    status: git status
+    size:
+      summary: du -sh *
+      total: du -sh .
 dependencies:
   collection: any
 

@@ -1,8 +1,13 @@
 import 'package:wt_name_that_color/color_difference.dart';
+import 'package:wt_name_that_color/color_list_generator.dart';
 
 import 'color_names_map.dart';
 
 class NameThatColor {
+  final Map<String, String> colorNamesMap;
+
+  NameThatColor(this.colorNamesMap);
+
   String findClosestColor(String inputHex) {
     String closestColorName = 'Unknown';
     double minDistance = double.infinity;
@@ -25,7 +30,11 @@ Future<void> main(List<String> arguments) async {
     print('Please provide a hex color value.');
     return;
   }
-  final closestColorName = NameThatColor().findClosestColor(arguments[0]);
 
-  print('Closest color name: $closestColorName');
+  if (arguments[0] == '--list') {
+    ColorListGenerator.printColorDefinitions(ColorNames.map);
+  } else {
+    final closestColorName = NameThatColor(ColorNames.map).findClosestColor(arguments[0]);
+    print('Closest color name: $closestColorName');
+  }
 }

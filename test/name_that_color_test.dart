@@ -1,9 +1,10 @@
 import 'package:test/test.dart';
+import 'package:wt_name_that_color/color_names_map.dart';
 import 'package:wt_name_that_color/name_that_color.dart';
 
 void main() {
   group('NameThatColor', () {
-    final nameThatColor = NameThatColor();
+    final nameThatColor = NameThatColor(ColorNames.map);
 
     test('SmokeTest', () {
       expect(nameThatColor.findClosestColor('#FFFFFF'), equals('White'));
